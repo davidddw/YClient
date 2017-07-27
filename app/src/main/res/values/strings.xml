@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">琅嬛福地</string>
+
+    <string name="drawer_home">主页</string>
+    <string name="drawer_invoke_system_page">壁纸设置(本地)</string>
+    <string name="drawer_settings">设置</string>
+    <string name="drawer_about">关于</string>
+
+    <string name="imageDefaultContent">无图片</string>
+
+    <!--网络相关-->
+    <string name="gank_net_fail">网络出问题啦</string>
+    <string name="share_photo">share_photo</string>
+
+    <string name="movie_details_title">简介</string>
+    <string name="chapter_name">目录</string>
+    <string name="chapter_more">更多></string>
+    <string name="chapter_order">倒序</string>
+    <string name="title_activity_novel_catalog">NovelCatalogActivity</string>
+</resources>

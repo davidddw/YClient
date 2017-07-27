@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llCatalog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/backgroundColor">
+
+        <include layout="@layout/layout_custom_toolbar"
+                 android:id="@+id/tbNovelChapterToolbar"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/catalogBg"
+            android:paddingStart="@dimen/activity_default_padding"
+            android:paddingEnd="@dimen/activity_default_padding"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/tvSideMenuTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"/>
+
+            <com.flyco.roundview.RoundTextView
+                android:id="@+id/rtvSideMenuOrder"
+                style="@style/AppTheme.Label"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/sSpinnerButton"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="5dp"
+                android:paddingBottom="4dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="4dp"
+                android:text="@string/chapter_order"
+                android:textColor="#080808"
+                app:rv_backgroundColor="@android:color/white"
+                app:rv_cornerRadius="3dp"
+                app:rv_strokeColor="#080808"
+                app:rv_strokeWidth="@dimen/division_line"
+                app:rv_textPressColor="@android:color/white"/>
+
+            <Spinner
+                android:id="@+id/sSpinnerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
+                android:theme="@style/AppTheme.SpinnerStyle"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvSideMenuContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/activity_default_padding"
+            android:paddingEnd="@dimen/activity_default_padding"
+            android:scrollbars="none"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            style="@style/AVLoadingIndicatorView"
+            app:indicatorColor="@color/colorAccent"
+            app:indicatorName="BallSpinFadeLoaderIndicator"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

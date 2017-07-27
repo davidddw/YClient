@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tab
+        id="@+id/tab_main"
+        icon="@drawable/ic_home_black_24dp"
+        app:showAsAction="ifRoom"
+        title="首页" />
+    <tab
+        id="@+id/tab_category"
+        icon="@drawable/ic_widgets_black_24dp"
+        app:showAsAction="ifRoom"
+        title="分类" />
+    <tab
+        id="@+id/tab_album"
+        icon="@drawable/ic_image_album_24dp"
+        app:showAsAction="ifRoom"
+        title="相册" />
+    <tab
+        id="@+id/tab_novel"
+        icon="@drawable/ic_local_library_black_24dp"
+        app:showAsAction="ifRoom"
+        title="小说" />
+</tabs>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginTop="5dp">
+
+    <ImageView
+        android:id="@+id/ivNovelImage"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:contentDescription="@string/imageDefaultContent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_account_circle_grey600_24dp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/ivNovelImage"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tvNovelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:maxLines="1"
+            android:textColor="#000"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tvNovelSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tvNovelName"
+            android:paddingTop="5dp"
+            android:maxLines="3"
+            android:lineSpacingMultiplier="1.2"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tvNovelAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tvNovelSummary"
+            android:maxLines="1"
+            android:textSize="12sp"/>
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/rtvNovelType"
+            style="@style/AppTheme.Label"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/tvNovelAuthor"
+            android:layout_alignBaseline="@+id/tvNovelAuthor"
+            android:layout_marginStart="5dp"
+            android:padding="2dp"
+            android:text="@string/chapter_order"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            app:rv_backgroundColor="@color/colortype"
+            app:rv_cornerRadius="2dp"
+            app:rv_strokeColor="@android:color/white"
+            app:rv_strokeWidth="@dimen/division_line"
+            app:rv_textPressColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/tvNovelLatest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tvNovelAuthor"
+            android:layout_marginTop="5dp"
+            android:text="asdfads"
+            android:maxLines="1"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
